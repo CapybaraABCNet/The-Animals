@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Капибары</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Merriweather:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .m {
+    color:black;
+    border-radius: 15px; /* Сглаженные углы */
+    padding: 20px;
+    text-align: center; /* Центрирование текста */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: appear 2s forwards;
+    margin-bottom: 20px; /* Отступ снизу */
+    
+}
+@keyframes appear {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        img {
+            width: 300px; /* Ширина изображения */
+            border-radius: 15px; /* Сглаженные углы для изображения */
+            opacity: 0;
+            animation: imageFadeIn 2s forwards;
+            display: block; /* Отображение изображения как блочного элемента */
+            margin: 20px auto; /* Центрирование изображения */
+        }
+
+        @keyframes imageFadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        header {
+            background-color: #6ab04c;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .banner {
+            background-image: url('https://64.media.tumblr.com/79b1e9aaece2bfb2209a99b430362f4f/tumblr_pn1ppnIMAF1rs01s0o1_1280.png');
+            height: 300px;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+        }
+        .button {
+            background-color: #ffcc00;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="m">The Animals</h1>
+    <nav>
+        <a class="m" href="index.html">Главная страница</a>
+        <a class="m" href="info.html">Животные</a>
+        <a class="m" href="game.html">Игры и т.д</a>
+        <a class="m" href="abc.html">Создатель сайта</a>
+    </nav>
+</header>
+
+<div class="banner">
+    <h3 class="m">Добро пожаловать в мир животных!</h3>
+    <p></p>
+    <button class="button" onclick="func()">Узнать больше</button>
+</div>
+
+<h1 class="m">The Animals</h1>
+<p class="m">сайт о животных</p>
+<img src="https://i.pinimg.com/736x/e8/76/b1/e876b1c8dc1becb4de71efeb3c66edc3.jpg">
+<h4 class="m">Привет! Это сайт о животных, он очень интересный, хорошего пользования!</h4>
+<img src="https://i.pinimg.com/originals/13/3f/e8/133fe82f34507355b39e64bac4e85ae1.jpg">
+
+
+
+<script>
+    function func() {
+        alert("Привет! Это я, разработчик этого сайта 'CapybaraABC.NET', спасибо большое то что нажали на эту кнопку, этот сайт будет развиваться ещё долго, надеюсь то что он вам понравится!");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Капибары</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Merriweather:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .m {
+    color:black;
+    border-radius: 15px; /* Сглаженные углы */
+    padding: 20px;
+    text-align: center; /* Центрирование текста */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: appear 2s forwards;
+    margin-bottom: 20px; /* Отступ снизу */
+    
+}
+@keyframes appear {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        img {
+            width: 300px; /* Ширина изображения */
+            border-radius: 15px; /* Сглаженные углы для изображения */
+            opacity: 0;
+            animation: imageFadeIn 2s forwards;
+            display: block; /* Отображение изображения как блочного элемента */
+            margin: 20px auto; /* Центрирование изображения */
+        }
+
+        @keyframes imageFadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        header {
+            background-color: #6ab04c;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .banner {
+            background-image: url('https://64.media.tumblr.com/79b1e9aaece2bfb2209a99b430362f4f/tumblr_pn1ppnIMAF1rs01s0o1_1280.png');
+            height: 300px;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+        }
+        .button {
+            background-color: #ffcc00;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        figure {
+  margin: 0;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="m">The Animals</h1>
+    <nav>
+        <a class="m" href="index.html">Главная страница</a>
+        <a class="m" href="info.html">Животные</a>
+        <a class="m" href="game.html">Игры и т.д</a>
+        <a class="m" href="abc.html">Создатель сайта</a>
+    </nav>
+</header>
+
+<div class="banner">
+    <h3 class="m">Добро пожаловать в мир животных!</h3>
+    <p></p>
+    <button class="button" onclick="func()">Узнать больше</button>
+</div>
+
+<h1 class="m">Прикольные штуки</h1>
+<p class="m">ага</p>
+<img src="https://avatars.mds.yandex.net/get-entity_search/2304191/726334844/S600xU_2x">
+<h1 class="m">Случайное изображение</h1>
+<img id="randomImage" src="" alt="Случайное изображение" style="max-width: 500px; max-height: 500px;">
+<button type="button" class="btn btn-info" id="newImageButton">Показать другое изображение</button>
+
+<figure>
+  <figcaption class="center">Кот</figcaption>
+  <audio controls src="kot_-_myaukane.mp3" class="centrer"></audio>
+</figure>
+<figure>
+  <figcaption class="center">собака</figcaption>
+  <audio controls src="dog-bark-15.mp3" class="centrer"></audio>
+</figure>
+<figure>
+  <figcaption class="center">капибара</figcaption>
+  <audio controls src="55dpy3iv.mp3" class="centrer"></audio>
+</figure>
+<figure>
+  <figcaption class="center">Слон</figcaption>
+  <audio controls src="z_uk-slona.mp3" class="centrer"></audio>
+</figure>
+<figure>
+  <figcaption class="center">Морская Свинка</figcaption>
+  <audio controls src="guinea-pig-1_gjrg6zn_.mp3" class="centrer"></audio>
+</figure>
+<script>
+    function func() {
+        alert("Привет! Это я, разработчик этого сайта 'CapybaraABC.NET', спасибо большое то что нажали на эту кнопку, этот сайт будет развиваться ещё долго, надеюсь то что он вам понравится!");
+    }
+    const im = [
+        "https://avatars.mds.yandex.net/get-entity_search/2000260/1169613050/S600xU_2x",
+        "https://avatars.mds.yandex.net/i?id=3b9bc6fc299c07fb1c47e1a1c900105d4d076e06-10853576-images-thumbs&ref=rim&n=33&w=360&h=225",
+        "https://i.pinimg.com/originals/6d/69/58/6d69581c35c4f4ca92087deb28d4c2ba.jpg",
+        "https://wallpapers.com/images/hd/pensive-macaque-portrait-j2s33kgr0928lgzb.jpg",
+        "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_67675e774c8e9a56ab56438d_6767660d253d43366fef1fce/scale_1200",
+        "https://avatars.mds.yandex.net/i?id=1fde8a1b31c8bc49c3b25fbabf7c766b_l-4590869-images-thumbs&n=13",
+        "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1EyRgS.img?w=1280&h=853&m=4&q=91",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/African_Elephant_%28Loxodonta_africana%29_male_%2817289351322%29.jpg/640px-African_Elephant_%28Loxodonta_africana%29_male_%2817289351322%29.jpg"
+    ];
+
+    function getRandom() {
+        const randomIm = Math.floor(Math.random() * im.length);
+        return im[randomIm]; 
+    }
+
+        
+    document.getElementById('randomImage').src = getRandom();
+
+
+    document.getElementById('newImageButton').addEventListener('click', function() {
+        document.getElementById('randomImage').src = getRandom();
+    });
+
+</script>
+</body>
+</html>
